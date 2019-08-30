@@ -1,15 +1,23 @@
 import React, { useState } from 'react';
-
 import axios from 'axios';  // Importamos Axios
+import styled from "styled-components" // Importamos `Styled Components`
 
 import Ritmosustanciometro from './Ritmosustanciometro';
 
+// Creamos un container de `styled.div` con unos estilos básicos
+const Container = styled.div`
+  width: 100%;
+  max-width: 640px;
+`
+
 function App() {
   const [nombre, setNombre] = useState('');
-  const [individuos, setIndividuos] = useState([{
+  const [individuos, setIndividuos] = useState([
+    {
     nombre: 'goncy',
     ritmosustancia: 100
-  }]);
+    }
+  ]);
 
   // Creamos una función `actualizarNombre`
   function actualizarNombre(event) {
