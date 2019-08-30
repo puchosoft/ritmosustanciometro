@@ -55,7 +55,7 @@ function App() {
       {/* Agregamos nuestro formulario con un campo de texto y un botón */}
       <form onSubmit={obtenerRitmosustancia}>
         {/* con `onChange` le decimos a `React` que ejecute una función cada vez que haya un cambio de valor en el campo. Con `value` le decimos que queremos que el valor del campo siempre sea el valor que le pasemos, por lo tanto, al actualizar el campo, se va a reemplazar nuestro estado, y ese estado va a ser el nuevo valor de nuestro campo */}
-        <input type="text" onChange={actualizarNombre} value={nombre} />
+        <input type="text" data-test="nombre" onChange={actualizarNombre} value={nombre} />
         <button type="submit">Obtener ritmosustancia</button>
       </form>
     </div>
